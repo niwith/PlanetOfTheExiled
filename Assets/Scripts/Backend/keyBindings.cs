@@ -3,12 +3,14 @@ using System.Collections;
 
 public class keyBindings : MonoBehaviour {
 
-    public string camForward = "w";
-    public string camRight = "d";
-    public string camLeft = "a";
-    public string camBack = "s";
-    public string camUp = "=";
-    public string camDown = "-";
+    public static string camForward = "w";
+    public static string camRight = "d";
+    public static string camLeft = "a";
+    public static string camBack = "s";
+    public static string camUp = "=";
+    public static string camDown = "-";
+    public static string camRotateLeft = "q";
+    public static string camRotateRight = "e";
 
     // Use this for initialization
     void Start () {
