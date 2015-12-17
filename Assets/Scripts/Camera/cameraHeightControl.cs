@@ -9,11 +9,7 @@ public class cameraHeightControl : MonoBehaviour {
     public float minHeight = 20;
     public float maxHeight = 200;
 
-
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public LayerMask layerMask = 1 << 8;
 	
 	// Update is called once per frame
 	void Update () {
@@ -40,7 +36,7 @@ public class cameraHeightControl : MonoBehaviour {
         //find difference between set cam height and actual height
         RaycastHit hit;
         Ray downRay = new Ray(transform.position, -Vector3.up);
-        if (Physics.Raycast(downRay, out hit))
+        if (Physics.Raycast(downRay, out hit, layerMask.value))
         {
             difference = cameraHeight - hit.distance;
         }

@@ -48,6 +48,9 @@
      <Compile Include="Assets\Scripts\Backend\keyBindings.cs" />
      <Compile Include="Assets\Scripts\Camera\cameraHeightControl.cs" />
      <Compile Include="Assets\Scripts\Camera\cameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Unit Selector\CameraOporator.cs" />
+     <Compile Include="Assets\Scripts\Unit Selector\Unit.cs" />
+     <Compile Include="Assets\TerrainToolkit\TerrainToolkit.cs" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Aircraft\AircraftGuidelines.txt" />
@@ -63,6 +66,7 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+     <None Include="Assets\TerrainToolkit\Read me.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
