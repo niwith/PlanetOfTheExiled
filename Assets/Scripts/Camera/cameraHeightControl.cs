@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class cameraHeightControl : MonoBehaviour {
 
@@ -8,15 +9,17 @@ public class cameraHeightControl : MonoBehaviour {
     public float cameraAjustSpeed = 10;
     public float minHeight = 20;
     public float maxHeight = 200;
+    public int layerMask = 1 << 8;
 
-    public LayerMask layerMask = 1 << 8;
-	
-	// Update is called once per frame
-	void Update () {
+    private static List<string> passables = new List<string>() { "Floor" };
+
+    // Update is called once per frame
+    void Update()
+    {
         //adjust by scroll wheel
-        cameraHeight += Input.GetAxis("Mouse ScrollWheel")*Time.deltaTime*cameraAjustSpeed*-1000;
+        cameraHeight += Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * cameraAjustSpeed * -1000;
         //adjust by button
-        if(Input.GetKey(keyBindings.camUp))
+        if (Input.GetKey(keyBindings.camUp))
         {
             cameraHeight += Time.deltaTime * -cameraAjustSpeed * 100;
         }
@@ -29,19 +32,31 @@ public class cameraHeightControl : MonoBehaviour {
         {
             cameraHeight = minHeight;
         }
-        else if(cameraHeight > maxHeight)
+        else if (cameraHeight > maxHeight)
         {
             cameraHeight = maxHeight;
         }
         //find difference between set cam height and actual height
+
         RaycastHit hit;
         Ray downRay = new Ray(transform.position, -Vector3.up);
-        if (Physics.Raycast(downRay, out hit, layerMask.value))
+
+        if (Physics.Raycast(downRay, out hit, Mathf.Infinity, layerMask))
         {
-            difference = cameraHeight - hit.distance;
+            if (hit.transform != null)
+            {
+                difference = cameraHeight - hit.distance;
+            }
+            else
+            {
+                difference = 0;
+            }
         }
         //change camera height
-        float newHeight = transform.position.y + difference;
-        transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
+        if (difference != 0)
+        {
+            float newHeight = transform.position.y + difference;
+            transform.position = new Vector3(transform.position.x, newHeight, transform.position.z);
+        }
     }
 }

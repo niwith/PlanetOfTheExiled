@@ -5,6 +5,8 @@ public class Unit : MonoBehaviour {
 
     public bool selected = false;
     public NavMeshAgent agent;
+    private bool selectedByClick = false;
+
 
     void Start()
     {
@@ -15,16 +17,19 @@ public class Unit : MonoBehaviour {
     {
         if (Input.GetMouseButton(0))
         {
-            Vector3 camPos = Camera.main.WorldToScreenPoint(transform.position);
-            camPos.y = CameraOporator.InvertMouseY(camPos.y);
-            selected = CameraOporator.selection.Contains(camPos);
+            if (!selectedByClick)
+            {
+                Vector3 camPos = Camera.main.WorldToScreenPoint(transform.position);
+                camPos.y = CameraOporator.InvertMouseY(camPos.y);
+                selected = CameraOporator.selection.Contains(camPos);
+            }
             if (selected)
             {
-                GetComponent<Renderer>().material.color = Color.red;
+                gameObject.GetComponentInChildren<Projector>().enabled = true;
             }
             else
             {
-                GetComponent<Renderer>().material.color = Color.white;
+                gameObject.GetComponentInChildren<Projector>().enabled = false;
             }
         }
 
@@ -35,8 +40,22 @@ public class Unit : MonoBehaviour {
             if (destination != Vector3.zero)
             {
                 agent.SetDestination(destination);
-                print("Navmesh Added");
             }
         }
+    }
+
+    private void OnMouseDown()
+    {
+        selectedByClick = true;
+        selected = true;
+    }
+
+    private void OnMouseUp()
+    {
+        if (selectedByClick)
+        {
+            selected = true;
+        }
+        selectedByClick = false;
     }
 }

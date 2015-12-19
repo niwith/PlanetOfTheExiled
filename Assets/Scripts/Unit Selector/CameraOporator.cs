@@ -7,6 +7,9 @@ public class CameraOporator : MonoBehaviour {
     public Texture2D selectionHighlight = null;
     public static Rect selection = new Rect();
     private Vector3 startClick = -Vector3.one;
+    public Color borderColor = new Color(0.8f, 0.8f, 0.95f);
+    public float borderWidth = 1f;
+    public Camera camera;
 
     private static Vector3 moveToDestination = Vector3.zero;
     private static List<string> passables = new List<string>() { "Floor" };
@@ -41,14 +44,42 @@ public class CameraOporator : MonoBehaviour {
                 selection.height = -selection.height;
             }
         }
+
+        RaycastHit hit;
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            hit.collider.SendMessageUpwards("selectByClick", SendMessageOptions.DontRequireReceiver);
+        }
+    }
+
+    public void DrawScreenRect(Rect rect, Color color)
+    {
+        GUI.color = color;
+        GUI.DrawTexture(rect, selectionHighlight);
+        GUI.color = Color.white;
+    }
+
+    public void DrawScreenRectBorder(Rect rect, float thickness, Color color)
+    {
+        // Top
+        DrawScreenRect(new Rect(rect.xMin, rect.yMin, rect.width, thickness), color);
+        // Left
+        DrawScreenRect(new Rect(rect.xMin, rect.yMin, thickness, rect.height), color);
+        // Right
+        DrawScreenRect(new Rect(rect.xMax - thickness, rect.yMin, thickness, rect.height), color);
+        // Bottom
+        DrawScreenRect(new Rect(rect.xMin, rect.yMax - thickness, rect.width, thickness), color);
     }
 
     private void OnGUI()
     {
         if(startClick != -Vector3.one)
         {
-            GUI.color = new Color(1, 1, 1, 0.5f);
+            GUI.color = new Color(0.8f, 0.8f, 0.95f, 0.25f);
             GUI.DrawTexture(selection, selectionHighlight);
+            DrawScreenRectBorder(selection, borderWidth, borderColor);
         }
     }
 
@@ -76,7 +107,7 @@ public class CameraOporator : MonoBehaviour {
             {
                 while(!passables.Contains(hit.transform.gameObject.name))
                 {
-                    if(Physics.Raycast(hit.transform.position, r.direction, out hit))
+                    if(Physics.Raycast(hit.point, r.direction, out hit))
                     {
                         break;
                     }

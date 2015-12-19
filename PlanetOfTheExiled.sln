@@ -5,6 +5,8 @@ Project("{41907CE2-A54B-A987-5D81-35CA7E4D7767}") = "PlanetOfTheExiled", "Assemb
 EndProject
 Project("{41907CE2-A54B-A987-5D81-35CA7E4D7767}") = "PlanetOfTheExiled", "Assembly-CSharp.csproj", "{159EE601-224A-8F22-AD4D-18806CD4CC82}"
 EndProject
+Project("{41907CE2-A54B-A987-5D81-35CA7E4D7767}") = "PlanetOfTheExiled", "Assembly-CSharp-Editor-firstpass.csproj", "{9CAFC381-4479-A090-5712-066EF5501605}"
+EndProject
 Project("{41907CE2-A54B-A987-5D81-35CA7E4D7767}") = "PlanetOfTheExiled", "Assembly-CSharp-Editor.csproj", "{50BBEC8A-5313-A71D-2915-56C960B886CF}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{159EE601-224A-8F22-AD4D-18806CD4CC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{159EE601-224A-8F22-AD4D-18806CD4CC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{159EE601-224A-8F22-AD4D-18806CD4CC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAFC381-4479-A090-5712-066EF5501605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAFC381-4479-A090-5712-066EF5501605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAFC381-4479-A090-5712-066EF5501605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAFC381-4479-A090-5712-066EF5501605}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50BBEC8A-5313-A71D-2915-56C960B886CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{50BBEC8A-5313-A71D-2915-56C960B886CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50BBEC8A-5313-A71D-2915-56C960B886CF}.Release|Any CPU.ActiveCfg = Release|Any CPU

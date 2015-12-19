@@ -46,17 +46,46 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Backend\keyBindings.cs" />
+     <Compile Include="Assets\Scripts\Backend\saveManager.cs" />
      <Compile Include="Assets\Scripts\Camera\cameraHeightControl.cs" />
      <Compile Include="Assets\Scripts\Camera\cameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Main Titile\mainMenuGUI.cs" />
      <Compile Include="Assets\Scripts\Unit Selector\CameraOporator.cs" />
      <Compile Include="Assets\Scripts\Unit Selector\Unit.cs" />
      <Compile Include="Assets\TerrainToolkit\TerrainToolkit.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\AddSomeForce.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\AdditionalData.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\AdditionalDataStorage.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\ArrayOfPrefabs.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\CentreAndPointMe.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\ChangeColor.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\CharacterMotor.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\ColorMe.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\CreateChildSphere.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\DeleteComponent.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\DeletedComponent.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\HelloWorld.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\IsDeserializing.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\KeepAReference.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\Movement.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\OpenDoor.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\RenameObject.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\SaveAndLoad.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\ScaleObject.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\Spawner.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\SwitchMesh.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\TestCoroutines.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\TestLoading.cs" />
+     <Compile Include="Assets\UnitySerializerExamples\Scripts\VariablesToSave.cs" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Aircraft\AircraftGuidelines.txt" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
+     <None Include="Assets\Materials\Projector\ProjectorAdditiveTint.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+     <None Include="Assets\Plugins\OpenUnityTools\unityserializer-ng\license.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
@@ -66,6 +95,7 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+     <None Include="Assets\UnitySerializerExamples\readme.txt" />
      <None Include="Assets\TerrainToolkit\Read me.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
