@@ -12,7 +12,7 @@ public class CameraOporator : MonoBehaviour {
     public Camera camera;
 
     private static Vector3 moveToDestination = Vector3.zero;
-    private static List<string> passables = new List<string>() { "Floor" };
+    private static List<string> passables = new List<string>() { "Floor"};
 
 	// Update is called once per frame
 	void Update () {
@@ -98,6 +98,7 @@ public class CameraOporator : MonoBehaviour {
 
     public static Vector3 GetDestination()
     {
+        
         if (moveToDestination == Vector3.zero)
         {
             RaycastHit hit;
@@ -115,7 +116,7 @@ public class CameraOporator : MonoBehaviour {
             }
             if(hit.transform != null)
             {
-                moveToDestination = hit.point;
+                moveToDestination = hit.point;   
             }
         }
         return moveToDestination;

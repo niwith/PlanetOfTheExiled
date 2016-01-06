@@ -7,6 +7,7 @@ public class Unit : MonoBehaviour {
     public NavMeshAgent agent;
     private bool selectedByClick = false;
 
+    public objectList listScript;
 
     void Start()
     {

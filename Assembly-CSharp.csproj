@@ -46,12 +46,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Backend\keyBindings.cs" />
+     <Compile Include="Assets\Scripts\Backend\objectList.cs" />
      <Compile Include="Assets\Scripts\Backend\saveManager.cs" />
+     <Compile Include="Assets\Scripts\Backend\unitData.cs" />
      <Compile Include="Assets\Scripts\Camera\cameraHeightControl.cs" />
      <Compile Include="Assets\Scripts\Camera\cameraMovement.cs" />
      <Compile Include="Assets\Scripts\Main Titile\mainMenuGUI.cs" />
      <Compile Include="Assets\Scripts\Unit Selector\CameraOporator.cs" />
      <Compile Include="Assets\Scripts\Unit Selector\Unit.cs" />
+     <Compile Include="Assets\Scripts\Unit\enemyAI.cs" />
+     <Compile Include="Assets\Scripts\Unit\unitHealth.cs" />
      <Compile Include="Assets\TerrainToolkit\TerrainToolkit.cs" />
      <Compile Include="Assets\UnitySerializerExamples\Scripts\AddSomeForce.cs" />
      <Compile Include="Assets\UnitySerializerExamples\Scripts\AdditionalData.cs" />
